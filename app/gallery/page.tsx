@@ -1,11 +1,12 @@
+"use client"
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useState } from 'react';
 
 export const revalidate = 0;
 
 // ✅ Dummy Data
-async function getGalleryItems() {
-  return [
+ const items = [
     {
       id: 1,
       title: "Royal Wedding Card",
@@ -18,7 +19,7 @@ async function getGalleryItems() {
       id: 2,
       title: "Business Banner",
       category: "Banners",
-      image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      image_url: "https://i.pinimg.com/736x/59/bb/1a/59bb1a9dee54ae0823016eac1a90be21.jpg",
       description: "Modern promotional banner design",
       display_order: 2,
     },
@@ -42,7 +43,7 @@ async function getGalleryItems() {
       id: 5,
       title: "Luxury Wedding Invite",
       category: "Wedding Cards",
-      image_url: "https://i.pinimg.com/736x/d5/56/2d/d5562d15904b4726003ecfbb80f5968a.jpg",
+      image_url: "https://i.pinimg.com/736x/12/06/7e/12067ee6b29ac61905e8d834af4b3748.jpg",
       description: "Premium golden wedding card",
       display_order: 5,
     },
@@ -58,7 +59,7 @@ async function getGalleryItems() {
       id: 7,
       title: "Royal Wedding Card",
       category: "Wedding Cards",
-      image_url: "https://i.pinimg.com/1200x/5c/10/bc/5c10bcd7917f8a6a4478f4586d97c645.jpg",
+      image_url: "https://i.pinimg.com/736x/4d/dc/b4/4ddcb4df6acb98613001bfe454cd5885.jpg",
       description: "Elegant royal theme wedding invitation",
       display_order: 7,
     },
@@ -66,7 +67,7 @@ async function getGalleryItems() {
       id: 8,
       title: "Business Banner",
       category: "Banners",
-      image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      image_url: "https://i.pinimg.com/736x/44/d7/dd/44d7ddc24c1087f090ba9f002009e99e.jpg",
       description: "Modern promotional banner design",
       display_order: 8,
     },
@@ -74,7 +75,7 @@ async function getGalleryItems() {
       id: 9,
       title: "Creative Visiting Card",
       category: "Visiting Cards",
-      image_url: "https://i.pinimg.com/736x/d1/75/8d/d1758d1d96db4e9a71d7bb56472629ee.jpg",
+      image_url: "https://i.pinimg.com/1200x/f3/38/20/f338206f19dfadb47a453b07b8f684e9.jpg",
       description: "Minimal and clean business card",
       display_order: 9,
     },
@@ -82,7 +83,7 @@ async function getGalleryItems() {
       id: 10,
       title: "Event Poster",
       category: "Posters",
-      image_url: "https://i.pinimg.com/1200x/5c/10/bc/5c10bcd7917f8a6a4478f4586d97c645.jpg",
+      image_url: "https://i.pinimg.com/736x/8f/c8/34/8fc834ef260ff3d55659a94911ac0d45.jpg",
       description: "Eye-catching event poster design",
       display_order: 10,
     },
@@ -90,7 +91,7 @@ async function getGalleryItems() {
       id: 11,
       title: "Luxury Wedding Invite",
       category: "Wedding Cards",
-      image_url: "https://i.pinimg.com/1200x/0b/37/69/0b3769b2e5faec15dce3770caae2cea9.jpg",
+      image_url: "https://i.pinimg.com/736x/96/b0/0f/96b00f8b01337cd1c91f1b9c2cda3be0.jpg",
       description: "Premium golden wedding card",
       display_order: 11,
     },
@@ -98,7 +99,7 @@ async function getGalleryItems() {
       id: 12,
       title: "Shop Opening Banner",
       category: "Banners",
-      image_url: "https://i.pinimg.com/736x/7f/ce/18/7fce18c25c8b077403e03bda8d4523b8.jpg",
+      image_url: "https://i.pinimg.com/1200x/29/05/b9/2905b9cde68036eae9ec74b4fb54a728.jpg",
       description: "Grand opening promotional banner",
       display_order: 12,
     },
@@ -106,7 +107,7 @@ async function getGalleryItems() {
       id: 13,
       title: "Royal Wedding Card",
       category: "Wedding Cards",
-      image_url: "https://i.pinimg.com/1200x/3d/78/c1/3d78c14b64dbb16fe29ff58c1562adfd.jpg",
+      image_url: "https://i.pinimg.com/736x/e1/a7/43/e1a743daa5767f0838897e9f56105f29.jpg",
       description: "Elegant royal theme wedding invitation",
       display_order: 13,
     },
@@ -114,7 +115,7 @@ async function getGalleryItems() {
       id: 14,
       title: "Business Banner",
       category: "Banners",
-      image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      image_url: "https://i.pinimg.com/1200x/0b/27/c6/0b27c6230b10f83cc692dd6955da76ef.jpg",
       description: "Modern promotional banner design",
       display_order: 14,
     },
@@ -122,7 +123,7 @@ async function getGalleryItems() {
       id: 15,
       title: "Creative Visiting Card",
       category: "Visiting Cards",
-      image_url: "https://i.pinimg.com/736x/d1/75/8d/d1758d1d96db4e9a71d7bb56472629ee.jpg",
+      image_url: "https://i.pinimg.com/736x/a3/3b/15/a33b1511a485aa5068b29c4c4b65e42a.jpg",
       description: "Minimal and clean business card",
       display_order:15,
     },
@@ -130,7 +131,7 @@ async function getGalleryItems() {
       id: 16,
       title: "Event Poster",
       category: "Posters",
-      image_url: "https://i.pinimg.com/1200x/5c/10/bc/5c10bcd7917f8a6a4478f4586d97c645.jpg",
+      image_url: "https://i.pinimg.com/736x/d2/5a/3b/d25a3bebd727718f5dfdf80138eb6900.jpg",
       description: "Eye-catching event poster design",
       display_order: 16,
     },
@@ -146,7 +147,7 @@ async function getGalleryItems() {
       id: 18,
       title: "Shop Opening Banner",
       category: "Banners",
-      image_url: "https://i.pinimg.com/736x/7f/ce/18/7fce18c25c8b077403e03bda8d4523b8.jpg",
+      image_url: "https://i.pinimg.com/736x/13/d8/15/13d815130ed8270e919a7e2103e6e49b.jpg",
       description: "Grand opening promotional banner",
       display_order:18,
     },
@@ -154,10 +155,18 @@ async function getGalleryItems() {
     
 
   ];
-}
 
-export default async function GalleryPage() {
-  const items = await getGalleryItems();
+
+export default function GalleryPage() {
+
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
+
+  const filteredItem = selectedCategory === "All"
+  ? items
+  : items.filter((e) => e.category === selectedCategory);
+  
+  
 
   const categories = ['All', 'Wedding Cards', 'Banners', 'Visiting Cards', 'Posters'];
 
@@ -182,7 +191,7 @@ export default async function GalleryPage() {
 
           <div className="flex flex-wrap gap-3 justify-center mb-12">
             {categories.map((category) => (
-              <Badge key={category} className="px-4 py-2 cursor-pointer">
+              <Badge key={category} onClick={()=>setSelectedCategory(category)} className="px-4 py-2 cursor-pointer">
                 {category}
               </Badge>
             ))}
@@ -190,7 +199,7 @@ export default async function GalleryPage() {
 
           {/* GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {items.map((item) => (
+            {filteredItem.map((item) => (
               <Card key={item.id} className="overflow-hidden group hover:shadow-xl transition">
 
                 {/* IMAGE */}
