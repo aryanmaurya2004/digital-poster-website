@@ -8,6 +8,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://perfectdigitalflex.vercel.app'),
   title: 'PrintCraft - Creative Printing & Design Services',
   description: 'Professional printing services including banner printing, wedding cards, visiting cards, poster printing, and custom graphic design.',
   keywords: 'printing, design, banner printing, wedding cards, visiting cards, poster printing, flex printing, graphic design',
