@@ -53,14 +53,14 @@ export default function AboutPage() {
                 designs and premium materi,
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
-                We specialize in transforming ideas into tangible, high-quality prints. Whether it's a
+                We specialize in transforming ideas into tangible, high-quality prints. Whether it&apos;s a
                 wedding invitation that captures the essence of love, a business banner that commands attention,
                 or a custom design that perfectly represents your brand, we bring expertise and creativity to
                 every project.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
                 With years of experience in the industry, we understand the importance of
-                every occasion—whether it's a wedding, birthday, business promotion, or special event.
+                every occasion—whether it&apos;s a wedding, birthday, business promotion, or special event.
                 We focus on delivering eye-catching designs that leave a lasting impression.
               </p>
             </div>

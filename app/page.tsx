@@ -173,7 +173,7 @@ export default function Home() {
               Ready to Bring Your Ideas to Life?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and quote. Let's create something amazing together!
+              Contact us today for a free consultation and quote. Let&apos;s create something amazing together!
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg">
