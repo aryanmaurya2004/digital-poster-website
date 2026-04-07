@@ -94,7 +94,7 @@ export default function ContactPage() {
               Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Touch</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              Have a project in mind? We	&apos;d love to hear from you. Send us a message and we	&apos;ll respond as soon as possible.
             </p>
           </div>
         </div>
