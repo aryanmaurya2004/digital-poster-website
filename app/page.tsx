@@ -87,7 +87,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/gallery">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg">
+                <Button size="lg" variant="outline" className="border-white text-black hover:bg-yellow-100 hover:text-slate-900 px-8 py-6 text-lg">
                   View Gallery
                 </Button>
               </Link>
