@@ -61,7 +61,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-[url('/wedding-bg.jpg')] bg-cover bg-center opacity-50 brightness-[0.4]"
+            className="absolute inset-0 bg-[url('/wedding-bg.jpg')] bg-cover bg-center opacity-90 brightness-[0.6]"
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-transparent to-slate-950/80" />
